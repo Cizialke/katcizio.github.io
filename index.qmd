@@ -1,14 +1,14 @@
 ---
-title: "Your Name"
+title: "Kat Cizio"
 toc: false
-image: "your photo.jpg"
+image: "IMG_8283.JPG"
 about:
   template: trestles
   links:
   - text: GitHub
-    href: link
+    href: https://github.com/Cizialke/katcizio.github.io
   - text: email
-    href:  link
+    href:  katarzyna-cizio@ou.edu
 ---
 
 ::: {.columnpage}
@@ -21,10 +21,10 @@ Welcome to my research profile website. I'm a student in the Intro to Reproducib
 
 Replace this section with information about yourself:
 
-- **Name:** Your Name Here
-- **Institution:** Your University
+- **Name:** Katarzyna Cizio
+- **Institution:** University of Oklahoma Health Campus
 - **Research Interests:** Add your research interests here
-- **Email:** your.email@university.edu
+- **Email:** katarzyna-cizio@ou.edu
 
 ## My Research
 
