@@ -28,8 +28,7 @@ format:
     css: styles.css
     code-overflow: wrap
     footer: "© 2026 My Research Profile | Built with Quarto"
-resources:
-  - images
+
 editor: source
 
 execute:
