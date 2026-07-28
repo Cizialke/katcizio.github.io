@@ -14,8 +14,9 @@ editor:
 Our brains are extremely complex, billions of cells form trillions connections.
 
 <br>
+<img src="images/Slide_1.jpg" width="100%">
 
-![](images/Slide_1.jpg){fig-align="center" width="100%"}
+
 
 <br>
 
@@ -26,7 +27,7 @@ cells **to** oxidativephosphorylation **(OXPHOS) in neurons.**
 
 <br>
 
-![](images/Slide_2.jpg){fig-align="center" width="100%"}
+<img src="images/Slide_2.jpg" width="100%">
 
 <br>
 
@@ -39,7 +40,7 @@ energetically support neurodevelopmental processes like neuronal migration.*
 
 <br>
 
-![](images/Slide_3.jpg){fig-align="center" width="100%"}
+<img src="images/Slide_3.jpg" width="100%">
 
 <br>
 
@@ -49,7 +50,7 @@ Electroporation** surgeries to label newborn neurons destined to become building
 
 <br>
 
-![](images/Slide_4.jpg){fig-align="center" width="100%"}
+<img src="images/Slide_4.jpg" width="100%">
 
 ## Methods
 
@@ -58,11 +59,11 @@ To analyze neuronal migration I used *TronMachine*, an app developed by Erik Den
 allows user to define start and end point of migration which usually is defined by **Lining of The Ventricle as start**
 and **Top of The Cortical Plate as endpoint.**
 
-![](images/Slide_5.jpg){fig-align="center" width="100%"}
+<img src="images/Slide_5.jpg" width="100%">
 
 Here are some representative images I acquired.
 
-![](images/Slide_6.jpg){fig-align="center" width="100%"}
+<img src="images/Slide_6.jpg" width="100%">
 
 Here is the .xlsx file format Tron Machine spit out.
 
