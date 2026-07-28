@@ -56,34 +56,6 @@
     "text": "Quarto Documentation\nGitHub Pages Documentation\nMarkdown Guide\nGit Basics\n\n\nNeed help? Contact your instructor or refer to the resources listed above."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Ozzy Cizio",
-    "section": "",
-    "text": "Name: Katarzyna (Kasia) Cizio\nInstitution: University of Oklahoma Health Campus, Department of Neuroscience\nResearch Interests: neurodevelopment, mitochondria, metabolism\nEmail: katarzyna-cizio@ou.edu\nThe Dog on The Left: My companion Ozzy, as you can see he is cute\n\n\n\n\nI’m interested in understanding how deficits in either activity or abundance of mitochondrial proteins affect neuronal migration in developing mouse cortex. Through this course, I’ve learned how to:\n\nHow not to waste my life on mindless clicking, coping and pasting between windows. I have ADHD, I hate doing that. Thank you Lindsay and Eleana for teaching me a more mindful use of free resources to optimize my research performance.\n\n\n\n\nThis site showcases nothing, it shows I am just trying. Projects page to see my final report and other work!\nAs my research progresses, I’ll continue adding:\n\nFunny quotes and jokes"
-  },
-  {
-    "objectID": "index.html#about-me",
-    "href": "index.html#about-me",
-    "title": "Ozzy Cizio",
-    "section": "",
-    "text": "Name: Katarzyna (Kasia) Cizio\nInstitution: University of Oklahoma Health Campus, Department of Neuroscience\nResearch Interests: neurodevelopment, mitochondria, metabolism\nEmail: katarzyna-cizio@ou.edu\nThe Dog on The Left: My companion Ozzy, as you can see he is cute"
-  },
-  {
-    "objectID": "index.html#my-research",
-    "href": "index.html#my-research",
-    "title": "Ozzy Cizio",
-    "section": "",
-    "text": "I’m interested in understanding how deficits in either activity or abundance of mitochondrial proteins affect neuronal migration in developing mouse cortex. Through this course, I’ve learned how to:\n\nHow not to waste my life on mindless clicking, coping and pasting between windows. I have ADHD, I hate doing that. Thank you Lindsay and Eleana for teaching me a more mindful use of free resources to optimize my research performance."
-  },
-  {
-    "objectID": "index.html#dont-get-too-excited",
-    "href": "index.html#dont-get-too-excited",
-    "title": "Ozzy Cizio",
-    "section": "",
-    "text": "This site showcases nothing, it shows I am just trying. Projects page to see my final report and other work!\nAs my research progresses, I’ll continue adding:\n\nFunny quotes and jokes"
-  },
-  {
     "objectID": "final-report.html",
     "href": "final-report.html",
     "title": "Final Report",
@@ -133,24 +105,31 @@
     "text": "Migration distributions are strongly right‑skewed, with control neurons clustering near the cortical plate and knockdown neurons showing a broader, left‑shifted pattern.\nNormality tests and visualizations confirm non‑normal distributions, making non‑parametric and mixed‑effects approaches necessary.\nWilcoxon rank‑sum testing shows a highly significant shift between conditions (p &lt; 2.2 × 10⁻¹⁶), indicating that knockdown neurons occupy systematically lower migration positions.\nPer‑mouse median migration values reveal consistent biological replicates, with knockdown mice showing reduced migration compared to controls. \nMixed‑effects modeling confirms a robust knockdown effect, estimating a ~9.5 percentage‑point decrease in median migration distance (p = 0.012) after accounting for mouse‑to‑mouse variability and KC batch. \nKC batch contributes no detectable variance, indicating stable experimental conditions across batches. \nTHANK YOU!!!"
   },
   {
-    "objectID": "projects.html",
-    "href": "projects.html",
-    "title": "Projects",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Ozzy Cizio",
     "section": "",
-    "text": "Here are my research projects and work:\n\n\nMy final project for CELL 6351 - Intro to Reproducible Data Analysis Using R.\nView Final Report →\n\n\n\n\nAs you continue your research journey, you can add more pages here! For example:\n\nConference posters\nPublications\nData visualizations\nAnalysis write-ups\nProject proposals\n\nTo add a new project:\n\nCreate a new .qmd file in the projects/ folder\nAdd a link to it on this page\nPush to GitHub and your site updates automatically!"
+    "text": "Name: Katarzyna (Kasia) Cizio\nInstitution: University of Oklahoma Health Campus, Department of Neuroscience\nResearch Interests: neurodevelopment, mitochondria, metabolism\nEmail: katarzyna-cizio@ou.edu\nThe Dog on The Left: My companion Ozzy, as you can see he is cute\n\n\n\n\nI’m interested in understanding how deficits in either activity or abundance of mitochondrial proteins affect neuronal migration in developing mouse cortex. Through this course, I’ve learned how to:\n\nHow not to waste my life on mindless clicking, coping and pasting between windows. I have ADHD, I hate doing that. Thank you Lindsay and Eleana for teaching me a more mindful use of free resources to optimize my research performance.\n\n\n\n\nThis site showcases nothing, it shows I am just trying. Projects page to see my final report and other work!\nAs my research progresses, I’ll continue adding:\n\nFunny quotes and jokes"
   },
   {
-    "objectID": "projects.html#final-report",
-    "href": "projects.html#final-report",
-    "title": "Projects",
+    "objectID": "index.html#about-me",
+    "href": "index.html#about-me",
+    "title": "Ozzy Cizio",
     "section": "",
-    "text": "My final project for CELL 6351 - Intro to Reproducible Data Analysis Using R.\nView Final Report →"
+    "text": "Name: Katarzyna (Kasia) Cizio\nInstitution: University of Oklahoma Health Campus, Department of Neuroscience\nResearch Interests: neurodevelopment, mitochondria, metabolism\nEmail: katarzyna-cizio@ou.edu\nThe Dog on The Left: My companion Ozzy, as you can see he is cute"
   },
   {
-    "objectID": "projects.html#adding-more-projects",
-    "href": "projects.html#adding-more-projects",
-    "title": "Projects",
+    "objectID": "index.html#my-research",
+    "href": "index.html#my-research",
+    "title": "Ozzy Cizio",
     "section": "",
-    "text": "As you continue your research journey, you can add more pages here! For example:\n\nConference posters\nPublications\nData visualizations\nAnalysis write-ups\nProject proposals\n\nTo add a new project:\n\nCreate a new .qmd file in the projects/ folder\nAdd a link to it on this page\nPush to GitHub and your site updates automatically!"
+    "text": "I’m interested in understanding how deficits in either activity or abundance of mitochondrial proteins affect neuronal migration in developing mouse cortex. Through this course, I’ve learned how to:\n\nHow not to waste my life on mindless clicking, coping and pasting between windows. I have ADHD, I hate doing that. Thank you Lindsay and Eleana for teaching me a more mindful use of free resources to optimize my research performance."
+  },
+  {
+    "objectID": "index.html#dont-get-too-excited",
+    "href": "index.html#dont-get-too-excited",
+    "title": "Ozzy Cizio",
+    "section": "",
+    "text": "This site showcases nothing, it shows I am just trying. Projects page to see my final report and other work!\nAs my research progresses, I’ll continue adding:\n\nFunny quotes and jokes"
   }
 ]
