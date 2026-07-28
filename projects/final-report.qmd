@@ -26,7 +26,6 @@ cells **to** oxidativephosphorylation **(OXPHOS) in neurons.**
 
 ![](images/Slide_2.jpg)
 
-
 <br>
 
 What are the consequences of cortical development errors?<br> Those errors may result in neurodevelopmental disorders.
@@ -67,9 +66,10 @@ Here is the .xlsx file format Tron Machine spit out.
 
 ```{r}
 library(readxl)
+library(dplyr)
 
 df <-read_excel("C:/Users/ciziok/katcizio.github.io/projects/neuronal_migration_analysis/data/Analysis R3/Tron Intermediate files/control/10x_1024_1umZ_KC63_M1_shc202_section_B_cropgreen ANALYSIS.xlsx")
-head(df)
+glimpse(df)
 
 ```
 
@@ -186,9 +186,10 @@ for (folder in folders) {                              # Take each folder name a
   }
 }
 
-
 df <-read_excel("C:/Users/ciziok/katcizio.github.io/projects/neuronal_migration_analysis/data/Analysis R3/Tron Intermediate files/control_mut/KC63_M1_CTL_B.xlsx")
-head(df)
+glimpse(df)
+
+
 ```
 
 Apparently one of the column in each of the excel files did not have a name, so R gave it made up name **...8**. Lets
@@ -224,7 +225,7 @@ for (folder in folders) {                              # Loop through each folde
 }
 
 df <-read_excel("C:/Users/ciziok/katcizio.github.io/projects/neuronal_migration_analysis/data/Analysis R3/Tron Intermediate files/control_mut/KC63_M1_CTL_B.xlsx")
-head(df)
+glimpse(df)
 ```
 
 <br>YAY it worked! <br>

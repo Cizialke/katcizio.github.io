@@ -233,23 +233,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Here is the .xlsx file format Tron Machine spit out.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span><span class="fu">read_excel</span>(<span class="st">"C:/Users/ciziok/katcizio.github.io/projects/neuronal_migration_analysis/data/Analysis R3/Tron Intermediate files/control/10x_1024_1umZ_KC63_M1_shc202_section_B_cropgreen ANALYSIS.xlsx"</span>)</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(df)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span><span class="fu">read_excel</span>(<span class="st">"C:/Users/ciziok/katcizio.github.io/projects/neuronal_migration_analysis/data/Analysis R3/Tron Intermediate files/control/10x_1024_1umZ_KC63_M1_shc202_section_B_cropgreen ANALYSIS.xlsx"</span>)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(df)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 6 × 8
-  `Object Num` `X (pixels)` `Y (pixels)` Distance from Lining of Ventricle (mi…¹
-         &lt;dbl&gt;        &lt;dbl&gt;        &lt;dbl&gt;                                   &lt;dbl&gt;
-1            1          598           12                                    291.
-2            2          998          435                                    235.
-3            3         1003          473                                    264.
-4            4          921          508                                    313.
-5            5         1026          542                                    317.
-6            6         1068          607                                    367.
-# ℹ abbreviated name: ¹​`Distance from Lining of Ventricle (microns)`
-# ℹ 4 more variables: `Distance from Top of Cortical Plate (microns)` &lt;dbl&gt;,
-#   `Grayscale Value` &lt;dbl&gt;,
-#   `%migrated Lining of Ventricle to Top of Cortical Plate` &lt;dbl&gt;, ...8 &lt;dbl&gt;</code></pre>
+<pre><code>Rows: 270
+Columns: 8
+$ `Object Num`                                             &lt;dbl&gt; 1, 2, 3, 4, 5…
+$ `X (pixels)`                                             &lt;dbl&gt; 598, 998, 100…
+$ `Y (pixels)`                                             &lt;dbl&gt; 12, 435, 473,…
+$ `Distance from Lining of Ventricle (microns)`            &lt;dbl&gt; 291.4341, 234…
+$ `Distance from Top of Cortical Plate (microns)`          &lt;dbl&gt; -556.59611, -…
+$ `Grayscale Value`                                        &lt;dbl&gt; 65535, 28931,…
+$ `%migrated Lining of Ventricle to Top of Cortical Plate` &lt;dbl&gt; 65.633997, 75…
+$ ...8                                                     &lt;dbl&gt; 34.36600, 24.…</code></pre>
 </div>
 </div>
 </section>
@@ -395,24 +393,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb11-29"><a href="#cb11-29" aria-hidden="true" tabindex="-1"></a>  }</span>
 <span id="cb11-30"><a href="#cb11-30" aria-hidden="true" tabindex="-1"></a>}</span>
 <span id="cb11-31"><a href="#cb11-31" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-32"><a href="#cb11-32" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-33"><a href="#cb11-33" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span><span class="fu">read_excel</span>(<span class="st">"C:/Users/ciziok/katcizio.github.io/projects/neuronal_migration_analysis/data/Analysis R3/Tron Intermediate files/control_mut/KC63_M1_CTL_B.xlsx"</span>)</span>
-<span id="cb11-34"><a href="#cb11-34" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(df)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb11-32"><a href="#cb11-32" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span><span class="fu">read_excel</span>(<span class="st">"C:/Users/ciziok/katcizio.github.io/projects/neuronal_migration_analysis/data/Analysis R3/Tron Intermediate files/control_mut/KC63_M1_CTL_B.xlsx"</span>)</span>
+<span id="cb11-33"><a href="#cb11-33" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(df)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 6 × 9
-  `Object Num` `X (pixels)` `Y (pixels)` Distance from Lining of Ventricle (mi…¹
-         &lt;dbl&gt;        &lt;dbl&gt;        &lt;dbl&gt;                                   &lt;dbl&gt;
-1            1          598           12                                    291.
-2            2          998          435                                    235.
-3            3         1003          473                                    264.
-4            4          921          508                                    313.
-5            5         1026          542                                    317.
-6            6         1068          607                                    367.
-# ℹ abbreviated name: ¹​`Distance from Lining of Ventricle (microns)`
-# ℹ 5 more variables: `Distance from Top of Cortical Plate (microns)` &lt;dbl&gt;,
-#   `Grayscale Value` &lt;dbl&gt;,
-#   `%migrated Lining of Ventricle to Top of Cortical Plate` &lt;dbl&gt;,
-#   prc_dist_V_CP &lt;dbl&gt;, file_id &lt;chr&gt;</code></pre>
+<pre><code>Rows: 270
+Columns: 9
+$ `Object Num`                                             &lt;dbl&gt; 1, 2, 3, 4, 5…
+$ `X (pixels)`                                             &lt;dbl&gt; 598, 998, 100…
+$ `Y (pixels)`                                             &lt;dbl&gt; 12, 435, 473,…
+$ `Distance from Lining of Ventricle (microns)`            &lt;dbl&gt; 291.4341, 234…
+$ `Distance from Top of Cortical Plate (microns)`          &lt;dbl&gt; -556.59611, -…
+$ `Grayscale Value`                                        &lt;dbl&gt; 65535, 28931,…
+$ `%migrated Lining of Ventricle to Top of Cortical Plate` &lt;dbl&gt; 65.633997, 75…
+$ ...8                                                     &lt;dbl&gt; 34.36600, 24.…
+$ file_id                                                  &lt;chr&gt; "KC63_M1_CTL_…</code></pre>
 </div>
 </div>
 <p>Apparently one of the column in each of the excel files did not have a name, so R gave it made up name <strong>…8</strong>. Lets fix that.</p>
@@ -445,22 +439,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb13-26"><a href="#cb13-26" aria-hidden="true" tabindex="-1"></a>}</span>
 <span id="cb13-27"><a href="#cb13-27" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb13-28"><a href="#cb13-28" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span><span class="fu">read_excel</span>(<span class="st">"C:/Users/ciziok/katcizio.github.io/projects/neuronal_migration_analysis/data/Analysis R3/Tron Intermediate files/control_mut/KC63_M1_CTL_B.xlsx"</span>)</span>
-<span id="cb13-29"><a href="#cb13-29" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(df)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb13-29"><a href="#cb13-29" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(df)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 6 × 9
-  `Object Num` `X (pixels)` `Y (pixels)` Distance from Lining of Ventricle (mi…¹
-         &lt;dbl&gt;        &lt;dbl&gt;        &lt;dbl&gt;                                   &lt;dbl&gt;
-1            1          598           12                                    291.
-2            2          998          435                                    235.
-3            3         1003          473                                    264.
-4            4          921          508                                    313.
-5            5         1026          542                                    317.
-6            6         1068          607                                    367.
-# ℹ abbreviated name: ¹​`Distance from Lining of Ventricle (microns)`
-# ℹ 5 more variables: `Distance from Top of Cortical Plate (microns)` &lt;dbl&gt;,
-#   `Grayscale Value` &lt;dbl&gt;,
-#   `%migrated Lining of Ventricle to Top of Cortical Plate` &lt;dbl&gt;,
-#   prc_dist_V_CP &lt;dbl&gt;, file_id &lt;chr&gt;</code></pre>
+<pre><code>Rows: 270
+Columns: 9
+$ `Object Num`                                             &lt;dbl&gt; 1, 2, 3, 4, 5…
+$ `X (pixels)`                                             &lt;dbl&gt; 598, 998, 100…
+$ `Y (pixels)`                                             &lt;dbl&gt; 12, 435, 473,…
+$ `Distance from Lining of Ventricle (microns)`            &lt;dbl&gt; 291.4341, 234…
+$ `Distance from Top of Cortical Plate (microns)`          &lt;dbl&gt; -556.59611, -…
+$ `Grayscale Value`                                        &lt;dbl&gt; 65535, 28931,…
+$ `%migrated Lining of Ventricle to Top of Cortical Plate` &lt;dbl&gt; 65.633997, 75…
+$ prc_dist_V_CP                                            &lt;dbl&gt; 34.36600, 24.…
+$ file_id                                                  &lt;chr&gt; "KC63_M1_CTL_…</code></pre>
 </div>
 </div>
 <p><br>YAY it worked! <br></p>
