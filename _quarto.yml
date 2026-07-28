@@ -2,6 +2,9 @@ project:
   type: website
   execute-dir: file
   output-dir: docs
+  resources:
+  - images
+
 
 website:
   title: "My Research Profile"
@@ -25,7 +28,8 @@ format:
     css: styles.css
     code-overflow: wrap
     footer: "© 2026 My Research Profile | Built with Quarto"
-
+resources:
+  - images
 editor: source
 
 execute:
