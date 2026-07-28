@@ -210,74 +210,79 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="introduction" class="level2">
 <h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
 <p>Our brains are extremely complex, billions of cells form trillions connections.</p>
-<p><img src="projects/neuronal_migration_analysis/images/Slide_1.jpg" width="100%"></p>
-<p>What distinguishes us from other species is the complexity of the neocortex. That complexity is build by multiple tightly precised stages of development consisting of proliferation and differentiation, migration, synaptogenesis and pruning. These stages are highly energy dependent and require a metabolic transition from electrolysis in stem cells to oxidativephosphorylation (OXPHOS) in neurons.</p>
-<p><img src="projects/neuronal_migration_analysis/images/Slide_2.jpg" width="100%"></p>
-<p>What are the consequences of cortical development errors? Those errors may result in neurodevelopmental disorders. Pathogenic variants in OGDH, rate limiting components of the tricarboxylic acid (TCA) cycle, have been identified in children with severe neurological impairment. The molecular mechanisms by which these mutations give rise to neurodevelopmental disorders remain poorly understood. One possibility is that alteration in OGDH activity or abundance may impact the metabolic switch from glycolisys to OXPHOS, which can result in the cell losing the possibility to fully energetically support neurodevelopmental processes like neuronal migration.</p>
-<p><img src="projects/neuronal_migration_analysis/images/Slide_3.jpg" width="100%"></p>
-<p>We decided to take a closer look at neuronal migration in OGDH deficiency model. We performed In Utero Electroporation surgeries to label newborn neurons of layer 2/3 and follow them through development.</p>
-<p><img src="projects/neuronal_migration_analysis/images/Slide_4.jpg" width="100%"></p>
-<p>Here is the .csv file format Tron Machine spit out.</p>
+<p><br></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Slide_1.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+<p><br></p>
+<p>What distinguishes us from other species is the complexity of the neocortex. That complexity is build by multiple tightly precised stages of development consisting of proliferation and differentiation, <strong>migration</strong>, synaptogenesis and pruning. These stages are highly <strong>energy demanding</strong> and require a <strong>metabolic transition from glycolisys</strong> in stem cells <strong>to</strong> oxidativephosphorylation <strong>(OXPHOS) in neurons.</strong></p>
+<p><br></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Slide_2.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+<p><br></p>
+<p>What are the consequences of cortical development errors?<br> Those errors may result in neurodevelopmental disorders. Pathogenic variants in OGDH, rate limiting components of the tricarboxylic acid (TCA) cycle, have been identified in children with severe neurological impairment. <strong>The molecular mechanisms by which these mutations give rise to neurodevelopmental disorders remain poorly understood.</strong> <em>One possibility is that alteration in OGDH activity or abundance may impact the metabolic switch from glycolisys to OXPHOS, which can result in the cell struggling to energetically support neurodevelopmental processes like neuronal migration.</em></p>
+<p><br></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Slide_3.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+<p><br></p>
+<p><strong>We decided to take a closer look at neuronal migration in OGDH deficiency model</strong>. We performed <strong>In Utero Electroporation</strong> surgeries to label newborn neurons destined to become building blocks of cortical layer 2/3 and <strong>follow them through development.</strong></p>
+<p><br></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Slide_4.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
+</figure>
+</div>
 </section>
 <section id="methods" class="level2">
 <h2 class="anchored" data-anchor-id="methods">Methods</h2>
-<p>To analyze neuronal migration I used TronMachine, an app developed in Eric Dent’s lab (https://dent.neuro.wisc.edu/tools-2/). The app takes z-stacks of 10x confocal images, recognizes the cells, allows user to define start and end point of migration which usually is defined by <strong>Lining of The Ventricle as start and Top of The Cortical Plate as endpoint.</strong></p>
-<p><img src="projects/neuronal_migration_analysis/images/Slide_5.jpg" width="100%"></p>
+<p>To analyze neuronal migration I used <em>TronMachine</em>, an app developed by Erik Dent’s lab (https://dent.neuro.wisc.edu/tools-2/). <br>The app takes z-stacks of 10x confocal images, recognizes the cell body, allows user to define start and end point of migration which usually is defined by <strong>Lining of The Ventricle as start</strong> and <strong>Top of The Cortical Plate as endpoint.</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Slide_5.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
+</figure>
+</div>
 <p>Here are some representative images I acquired.</p>
-<p><img src="projects/neuronal_migration_analysis/images/Slide_6.jpg" width="100%"></p>
-<p>Here is the .csv file format Tron Machine spit out.</p>
-<p><img src="projects/neuronal_migration_analysis/images/Slide_7.png" width="100%"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Slide_6.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+<p>Here is the .xlsx file format Tron Machine spit out.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span><span class="fu">read_excel</span>(<span class="st">"C:/Users/ciziok/katcizio.github.io/projects/neuronal_migration_analysis/data/Analysis R3/Tron Intermediate files/control/10x_1024_1umZ_KC63_M1_shc202_section_B_cropgreen ANALYSIS.xlsx"</span>)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(df)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 8
+  `Object Num` `X (pixels)` `Y (pixels)` Distance from Lining of Ventricle (mi…¹
+         &lt;dbl&gt;        &lt;dbl&gt;        &lt;dbl&gt;                                   &lt;dbl&gt;
+1            1          598           12                                    291.
+2            2          998          435                                    235.
+3            3         1003          473                                    264.
+4            4          921          508                                    313.
+5            5         1026          542                                    317.
+6            6         1068          607                                    367.
+# ℹ abbreviated name: ¹​`Distance from Lining of Ventricle (microns)`
+# ℹ 4 more variables: `Distance from Top of Cortical Plate (microns)` &lt;dbl&gt;,
+#   `Grayscale Value` &lt;dbl&gt;,
+#   `%migrated Lining of Ventricle to Top of Cortical Plate` &lt;dbl&gt;, ...8 &lt;dbl&gt;</code></pre>
+</div>
+</div>
 </section>
 <section id="should-we-try-to-analyze-it" class="level2">
 <h2 class="anchored" data-anchor-id="should-we-try-to-analyze-it">Should we try to analyze it?</h2>
-<p>Each image gives a separate .csv file, so we have 43 csv files we need to work with. Lets start with tidying that mess.Here is how the directory looks like:</p>
-<p><img src="projects/neuronal_migration_analysis/images/Slide_8.png" width="100%"></p>
-<p>My file names are not uniform and are very confusing, too long for coding, not easily managable like this: <strong>10x_1024_1umZ_KC72_M1_3169_section_A_crop ANALYSIS.xlsx</strong> Sometimes there are spaces, sometimes there are underscores between words, that needs to be unified.</p>
+<p>Each image gives a separate .xlsx file, so we have multiple files we need to work with. <strong>Lets start with tidying that mess.</strong> Here is how the directory looks like:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># The File Names are not uniform and hard to refer to, lets fix that</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"tidyverse"</span>)                                   <span class="co"># Using tidyverse (includes stringr)</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>base_dir <span class="ot">&lt;-</span> <span class="st">"C:/Users/ciziok/katcizio.github.io/projects/neuronal_migration_analysis/data/Analysis R3/Tron Intermediate files"</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>                                                      <span class="co"># Step 1: Tell R where the files are located</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>conditions <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"control"</span> <span class="ot">=</span> <span class="st">"CTL"</span>, <span class="st">"knockdown"</span> <span class="ot">=</span> <span class="st">"KD"</span>) <span class="co"># Map folder names to condition labels</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (folder <span class="cf">in</span> <span class="fu">names</span>(conditions)) {                    <span class="co"># Loop through each folder name in 'conditions'</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  folder_path <span class="ot">&lt;-</span> <span class="fu">file.path</span>(base_dir, folder)           <span class="co"># Build full path: base_dir + folder name</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  files <span class="ot">&lt;-</span> <span class="fu">list.files</span>(folder_path,                     <span class="co"># Find all Excel files in the folder</span></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>                      <span class="at">pattern =</span> <span class="st">"</span><span class="sc">\\</span><span class="st">.xlsx$"</span>, </span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>                      <span class="at">full.names =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (file <span class="cf">in</span> files) {                                <span class="co"># Process each file one by one</span></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>    old_name <span class="ot">&lt;-</span> <span class="fu">basename</span>(file)                         <span class="co"># Get filename without folder path</span></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>    kc <span class="ot">&lt;-</span> <span class="fu">str_extract</span>(old_name, <span class="st">"KC</span><span class="sc">\\</span><span class="st">d+"</span>)              <span class="co"># Extract KC number (e.g., KC72)</span></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>    m <span class="ot">&lt;-</span> <span class="fu">str_extract</span>(old_name, <span class="st">"M</span><span class="sc">\\</span><span class="st">d+"</span>)                <span class="co"># Extract mouse number (e.g., M1)</span></span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>    section <span class="ot">&lt;-</span> <span class="fu">str_extract</span>(old_name, <span class="st">"section_([A-Z])"</span>)<span class="co"># Extract section (e.g., section_A)</span></span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>    section_letter <span class="ot">&lt;-</span> <span class="fu">str_replace</span>(section, <span class="st">"section_"</span>, <span class="st">""</span>)  </span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>                                                      <span class="co"># Remove 'section_' and keep only letter</span></span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>    cond <span class="ot">&lt;-</span> conditions[[folder]]                       <span class="co"># Get condition label (CTL or KD)</span></span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>    new_name <span class="ot">&lt;-</span> <span class="fu">paste0</span>(kc, <span class="st">"_"</span>, m, <span class="st">"_"</span>, cond, <span class="st">"_"</span>,     <span class="co"># Build new filename</span></span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>                       section_letter, <span class="st">".xlsx"</span>)</span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>    output_folder <span class="ot">&lt;-</span> <span class="fu">paste0</span>(folder, <span class="st">"_mut"</span>)            <span class="co"># Destination folder (control_mut, knockdown_mut)</span></span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>    new_path <span class="ot">&lt;-</span> <span class="fu">file.path</span>(base_dir, output_folder,     <span class="co"># Full path for renamed file</span></span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>                          new_name)</span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>    <span class="fu">file.copy</span>(file, new_path)                          <span class="co"># Copy + rename file into *_mut folder</span></span>
-<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a><span class="fu">list.files</span>(<span class="fu">file.path</span>(base_dir, <span class="st">"control"</span>))             <span class="co"># Check original folder</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">list.files</span> (<span class="st">"C:/Users/ciziok/katcizio.github.io/projects/neuronal_migration_analysis/data/Analysis R3/Tron Intermediate files/control"</span>, <span class="at">recursive =</span> <span class="cn">FALSE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1] "10x_1024_1umZ_KC63_M1_shc202_section_B_cropgreen ANALYSIS.xlsx"    
  [2] "10x_1024_1umZ_KC63_M1_shc202_section_C_cropgreen ANALYSIS.xlsx"    
@@ -293,7 +298,86 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 [12] "10x_1024_1umZ_KC75_M4_shc202_section_B_cropgreen ANALYSIS.xlsx"    
 [13] "10x_1024_1umZ_KC75_M4_shc202_section_C_greencrop ANALYSIS.xlsx"    </code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">list.files</span>(<span class="fu">file.path</span>(base_dir, <span class="st">"control_mut"</span>))         <span class="co"># Check renamed folder</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">list.files</span> (<span class="st">"C:/Users/ciziok/katcizio.github.io/projects/neuronal_migration_analysis/data/Analysis R3/Tron Intermediate files/knockdown"</span>, <span class="at">recursive =</span> <span class="cn">FALSE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "10x_1024_1umZ_KC73_M2_3169_section_A_crop ANALYSIS.xlsx"
+[2] "10x_1024_1umZ_KC73_M2_3169_section_B_crop ANALYSIS.xlsx"
+[3] "10x_1024_1umZ_KC73_M2_3169_section_C_crop ANALYSIS.xlsx"
+[4] "10x_1024_1umZ_KC75_M1_3169_section_A_crop ANALYSIS.xlsx"
+[5] "10x_1024_1umZ_KC75_M1_3169_section_B_crop ANALYSIS.xlsx"
+[6] "10x_1024_1umZ_KC75_M1_3169_section_C ANALYSIS.xlsx"     
+[7] "10x_1024_1umZ_KC75_M2_3169_section_A_crop ANALYSIS.xlsx"
+[8] "10x_1024_1umZ_KC75_M2_3169_section_B_crop ANALYSIS.xlsx"
+[9] "10x_1024_1umZ_KC75_M2_3169_section_C_crop ANALYSIS.xlsx"</code></pre>
+</div>
+</div>
+<p><br></p>
+<p><strong>Ugh… that is UGLY!</strong></p>
+<p>My file names are not uniform and are <strong>very confusing, too long for coding, not easily manageable</strong> like this: <br><strong>10x_1024_1umZ_KC72_M1_3169_section_A_crop ANALYSIS.xlsx</strong> <br></p>
+<p>Sometimes there are spaces, sometimes there are underscores between words, <strong>that needs to be unified.</strong></p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># The File Names are not uniform and hard to refer to, lets fix that</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"tidyverse"</span>)                                   <span class="co"># Using tidyverse (includes stringr)</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>base_dir <span class="ot">&lt;-</span> <span class="st">"C:/Users/ciziok/katcizio.github.io/projects/neuronal_migration_analysis/data/Analysis R3/Tron Intermediate files"</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>                                                      <span class="co"># Step 1: Tell R where the files are located</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>conditions <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"control"</span> <span class="ot">=</span> <span class="st">"CTL"</span>, <span class="st">"knockdown"</span> <span class="ot">=</span> <span class="st">"KD"</span>) <span class="co"># Map folder names to condition labels</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (folder <span class="cf">in</span> <span class="fu">names</span>(conditions)) {                    <span class="co"># Loop through each folder name in 'conditions'</span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>  folder_path <span class="ot">&lt;-</span> <span class="fu">file.path</span>(base_dir, folder)           <span class="co"># Build full path: base_dir + folder name</span></span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>  files <span class="ot">&lt;-</span> <span class="fu">list.files</span>(folder_path,                     <span class="co"># Find all Excel files in the folder</span></span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>                      <span class="at">pattern =</span> <span class="st">"</span><span class="sc">\\</span><span class="st">.xlsx$"</span>, </span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>                      <span class="at">full.names =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (file <span class="cf">in</span> files) {                                <span class="co"># Process each file one by one</span></span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>    old_name <span class="ot">&lt;-</span> <span class="fu">basename</span>(file)                         <span class="co"># Get filename without folder path</span></span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a>    kc <span class="ot">&lt;-</span> <span class="fu">str_extract</span>(old_name, <span class="st">"KC</span><span class="sc">\\</span><span class="st">d+"</span>)              <span class="co"># Extract KC number (e.g., KC72)</span></span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a>    m <span class="ot">&lt;-</span> <span class="fu">str_extract</span>(old_name, <span class="st">"M</span><span class="sc">\\</span><span class="st">d+"</span>)                <span class="co"># Extract mouse number (e.g., M1)</span></span>
+<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a>    section <span class="ot">&lt;-</span> <span class="fu">str_extract</span>(old_name, <span class="st">"section_([A-Z])"</span>)<span class="co"># Extract section (e.g., section_A)</span></span>
+<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a>    section_letter <span class="ot">&lt;-</span> <span class="fu">str_replace</span>(section, <span class="st">"section_"</span>, <span class="st">""</span>)  </span>
+<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a>                                                      <span class="co"># Remove 'section_' and keep only letter</span></span>
+<span id="cb7-29"><a href="#cb7-29" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb7-30"><a href="#cb7-30" aria-hidden="true" tabindex="-1"></a>    cond <span class="ot">&lt;-</span> conditions[[folder]]                       <span class="co"># Get condition label (CTL or KD)</span></span>
+<span id="cb7-31"><a href="#cb7-31" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb7-32"><a href="#cb7-32" aria-hidden="true" tabindex="-1"></a>    new_name <span class="ot">&lt;-</span> <span class="fu">paste0</span>(kc, <span class="st">"_"</span>, m, <span class="st">"_"</span>, cond, <span class="st">"_"</span>,     <span class="co"># Build new filename</span></span>
+<span id="cb7-33"><a href="#cb7-33" aria-hidden="true" tabindex="-1"></a>                       section_letter, <span class="st">".xlsx"</span>)</span>
+<span id="cb7-34"><a href="#cb7-34" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb7-35"><a href="#cb7-35" aria-hidden="true" tabindex="-1"></a>    output_folder <span class="ot">&lt;-</span> <span class="fu">paste0</span>(folder, <span class="st">"_mut"</span>)            <span class="co"># Destination folder (control_mut, knockdown_mut)</span></span>
+<span id="cb7-36"><a href="#cb7-36" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb7-37"><a href="#cb7-37" aria-hidden="true" tabindex="-1"></a>    new_path <span class="ot">&lt;-</span> <span class="fu">file.path</span>(base_dir, output_folder,     <span class="co"># Full path for renamed file</span></span>
+<span id="cb7-38"><a href="#cb7-38" aria-hidden="true" tabindex="-1"></a>                          new_name)</span>
+<span id="cb7-39"><a href="#cb7-39" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb7-40"><a href="#cb7-40" aria-hidden="true" tabindex="-1"></a>    <span class="fu">file.copy</span>(file, new_path)                          <span class="co"># Copy + rename file into *_mut folder</span></span>
+<span id="cb7-41"><a href="#cb7-41" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb7-42"><a href="#cb7-42" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb7-43"><a href="#cb7-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-44"><a href="#cb7-44" aria-hidden="true" tabindex="-1"></a><span class="fu">list.files</span>(<span class="fu">file.path</span>(base_dir, <span class="st">"control"</span>))          <span class="co"># Check original folder</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] "10x_1024_1umZ_KC63_M1_shc202_section_B_cropgreen ANALYSIS.xlsx"    
+ [2] "10x_1024_1umZ_KC63_M1_shc202_section_C_cropgreen ANALYSIS.xlsx"    
+ [3] "10x_1024_1umZ_KC63_M2_shc202_section_A_cropgreen ANALYSIS.xlsx"    
+ [4] "10x_1024_1umZ_KC63_M2_shc202_section_B_croppgreen ANALYSIS.xlsx"   
+ [5] "10x_1024_1umZ_KC63_M2_shc202_section_C_croppedgreen ANALYSIS.xlsx" 
+ [6] "10x_1024_1umZ_KC69_M2_shc202_section_A_cropgreen ANALYSIS.xlsx"    
+ [7] "10x_1024_1umZ_KC69_M2_shc202_section_B_cropgreen ANALYSIS.xlsx"    
+ [8] "10x_1024_1umZ_KC69_M2_shc202_section_C_cropped green ANALYSIS.xlsx"
+ [9] "10x_1024_1umZ_KC69_M5_shc202_section_A_cropgreen ANALYSIS.xlsx"    
+[10] "10x_1024_1umZ_KC69_M5_shc202_section_B_cropgreen ANALYSIS.xlsx"    
+[11] "10x_1024_1umZ_KC75_M4_shc202_section_A_cropgreen ANALYSIS.xlsx"    
+[12] "10x_1024_1umZ_KC75_M4_shc202_section_B_cropgreen ANALYSIS.xlsx"    
+[13] "10x_1024_1umZ_KC75_M4_shc202_section_C_greencrop ANALYSIS.xlsx"    </code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">list.files</span>(<span class="fu">file.path</span>(base_dir, <span class="st">"control_mut"</span>))      <span class="co"># Check renamed folder</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1] "KC63_M1_CTL_B.xlsx" "KC63_M1_CTL_C.xlsx" "KC63_M2_CTL_A.xlsx"
  [4] "KC63_M2_CTL_B.xlsx" "KC63_M2_CTL_C.xlsx" "KC69_M2_CTL_A.xlsx"
@@ -302,127 +386,201 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 [13] "KC75_M4_CTL_C.xlsx"</code></pre>
 </div>
 </div>
-<p>YAAAYYYYYY, all the files have useful names now!</p>
-<p>Now as we have nice easy file names, lets organize the inside of the files. We need to add a column that will help us distinguish data once me merge those files together. To do so we will read files, extract their names, add new column and name it with the file name we extracted.</p>
+<p><br><strong>YAAAYYYYYY, all the files have useful names now!</strong> <br></p>
+<p>Now as we have nice easy file names, lets organize the cells of the files. We need to add a column that will help us distinguish data once me merge those files together. To do so we will read files, extract their names, add new column and name it with the file name we extracted.<br></p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># My files are .xlsx so I need to use libraries like library(readxl), library(writexl)</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)                                        <span class="co"># Read Excel files</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(writexl)                                       <span class="co"># Write Excel files</span></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>base_dir <span class="ot">&lt;-</span> <span class="st">"C:/Users/ciziok/katcizio.github.io/projects/neuronal_migration_analysis/data/Analysis R3/Tron Intermediate files"</span></span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>                                                       <span class="co"># Base directory where folders live</span></span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>folders <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"control_mut"</span>, <span class="st">"knockdown_mut"</span>)           <span class="co"># Tells R which folders to look into</span></span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (folder <span class="cf">in</span> folders) {                              <span class="co"># Take each folder name and call it 'folder'</span></span>
-<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>  folder_path <span class="ot">&lt;-</span> <span class="fu">file.path</span>(base_dir, folder)           <span class="co"># Build full path to folder</span></span>
-<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>  files <span class="ot">&lt;-</span> <span class="fu">list.files</span>(folder_path,                     <span class="co"># Find all .xlsx files in folder</span></span>
-<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>                      <span class="at">pattern =</span> <span class="st">"</span><span class="sc">\\</span><span class="st">.xlsx$"</span>, </span>
-<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>                      <span class="at">full.names =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (file <span class="cf">in</span> files) {                                <span class="co"># Process each file one by one</span></span>
-<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>    file_id <span class="ot">&lt;-</span> tools<span class="sc">::</span><span class="fu">file_path_sans_ext</span>(<span class="fu">basename</span>(file))</span>
-<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>                                                       <span class="co"># Extract file name without extension</span></span>
-<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>    df <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(file)                             <span class="co"># Read Excel file</span></span>
-<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>    df<span class="sc">$</span>file_id <span class="ot">&lt;-</span> file_id                              <span class="co"># Add new column with file_id</span></span>
-<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>    <span class="fu">write_xlsx</span>(df, file)                               <span class="co"># Save updated file back to same location</span></span>
-<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># My files are .xlsx so I need to use libraries like library(readxl), library(writexl)</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)                                        <span class="co"># Read Excel files</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(writexl)                                       <span class="co"># Write Excel files</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>base_dir <span class="ot">&lt;-</span> <span class="st">"C:/Users/ciziok/katcizio.github.io/projects/neuronal_migration_analysis/data/Analysis R3/Tron Intermediate files"</span></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>                                                       <span class="co"># Base directory where folders live</span></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>folders <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"control_mut"</span>, <span class="st">"knockdown_mut"</span>)           <span class="co"># Tells R which folders to look into</span></span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (folder <span class="cf">in</span> folders) {                              <span class="co"># Take each folder name and call it 'folder'</span></span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a>  folder_path <span class="ot">&lt;-</span> <span class="fu">file.path</span>(base_dir, folder)           <span class="co"># Build full path to folder</span></span>
+<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a>  files <span class="ot">&lt;-</span> <span class="fu">list.files</span>(folder_path,                     <span class="co"># Find all .xlsx files in folder</span></span>
+<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a>                      <span class="at">pattern =</span> <span class="st">"</span><span class="sc">\\</span><span class="st">.xlsx$"</span>, </span>
+<span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a>                      <span class="at">full.names =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb11-18"><a href="#cb11-18" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb11-19"><a href="#cb11-19" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (file <span class="cf">in</span> files) {                                <span class="co"># Process each file one by one</span></span>
+<span id="cb11-20"><a href="#cb11-20" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb11-21"><a href="#cb11-21" aria-hidden="true" tabindex="-1"></a>    file_id <span class="ot">&lt;-</span> tools<span class="sc">::</span><span class="fu">file_path_sans_ext</span>(<span class="fu">basename</span>(file))</span>
+<span id="cb11-22"><a href="#cb11-22" aria-hidden="true" tabindex="-1"></a>                                                       <span class="co"># Extract file name without extension</span></span>
+<span id="cb11-23"><a href="#cb11-23" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb11-24"><a href="#cb11-24" aria-hidden="true" tabindex="-1"></a>    df <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(file)                             <span class="co"># Read Excel file</span></span>
+<span id="cb11-25"><a href="#cb11-25" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb11-26"><a href="#cb11-26" aria-hidden="true" tabindex="-1"></a>    df<span class="sc">$</span>file_id <span class="ot">&lt;-</span> file_id                              <span class="co"># Add new column with file_id</span></span>
+<span id="cb11-27"><a href="#cb11-27" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb11-28"><a href="#cb11-28" aria-hidden="true" tabindex="-1"></a>    <span class="fu">write_xlsx</span>(df, file)                               <span class="co"># Save updated file back to same location</span></span>
+<span id="cb11-29"><a href="#cb11-29" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb11-30"><a href="#cb11-30" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb11-31"><a href="#cb11-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-32"><a href="#cb11-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-33"><a href="#cb11-33" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span><span class="fu">read_excel</span>(<span class="st">"C:/Users/ciziok/katcizio.github.io/projects/neuronal_migration_analysis/data/Analysis R3/Tron Intermediate files/control_mut/KC63_M1_CTL_B.xlsx"</span>)</span>
+<span id="cb11-34"><a href="#cb11-34" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(df)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 9
+  `Object Num` `X (pixels)` `Y (pixels)` Distance from Lining of Ventricle (mi…¹
+         &lt;dbl&gt;        &lt;dbl&gt;        &lt;dbl&gt;                                   &lt;dbl&gt;
+1            1          598           12                                    291.
+2            2          998          435                                    235.
+3            3         1003          473                                    264.
+4            4          921          508                                    313.
+5            5         1026          542                                    317.
+6            6         1068          607                                    367.
+# ℹ abbreviated name: ¹​`Distance from Lining of Ventricle (microns)`
+# ℹ 5 more variables: `Distance from Top of Cortical Plate (microns)` &lt;dbl&gt;,
+#   `Grayscale Value` &lt;dbl&gt;,
+#   `%migrated Lining of Ventricle to Top of Cortical Plate` &lt;dbl&gt;,
+#   prc_dist_V_CP &lt;dbl&gt;, file_id &lt;chr&gt;</code></pre>
 </div>
-<p>Apparently one of the column in each of the excel files did not have a name,so R gave it …8. Lets fix that.</p>
-<p><img src="projects/neuronal_migration_analysis/images/...8.png" width="100%"></p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)                                        </span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(writexl)                                       </span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>base_dir <span class="ot">&lt;-</span> <span class="st">"C:/Users/ciziok/katcizio.github.io/projects/neuronal_migration_analysis/data/Analysis R3/Tron Intermediate files"</span></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>                                                       <span class="co"># Base directory where folders live</span></span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>folders <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"control_mut"</span>, <span class="st">"knockdown_mut"</span>)           <span class="co"># Folders to process</span></span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (folder <span class="cf">in</span> folders) {                              <span class="co"># Loop through each folder</span></span>
-<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>  folder_path <span class="ot">&lt;-</span> <span class="fu">file.path</span>(base_dir, folder)           <span class="co"># Build full path to folder</span></span>
-<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>  files <span class="ot">&lt;-</span> <span class="fu">list.files</span>(folder_path,                     <span class="co"># Find all .xlsx files</span></span>
-<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>                      <span class="at">pattern =</span> <span class="st">"</span><span class="sc">\\</span><span class="st">.xlsx$"</span>, </span>
-<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>                      <span class="at">full.names =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (file <span class="cf">in</span> files) {                                <span class="co"># Process each file</span></span>
-<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>    df <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(file)                             <span class="co"># Read Excel file</span></span>
-<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a>    <span class="fu">names</span>(df)[<span class="fu">names</span>(df) <span class="sc">==</span> <span class="st">"...8"</span>] <span class="ot">&lt;-</span> <span class="st">"prc_dist_V_CP"</span>  <span class="co"># Rename column ...8</span></span>
-<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>    <span class="fu">write_xlsx</span>(df, file)                               <span class="co"># Save updated file back</span></span>
-<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<p>YAY it worked!</p>
-<p><img src="projects/neuronal_migration_analysis/images/...8fix.png" width="100%"></p>
-<p><em>FIANLLY I GET TO COMBINE THE FILES TOGETHER</em></p>
+<p>Apparently one of the column in each of the excel files did not have a name, so R gave it made up name <strong>…8</strong>. Lets fix that.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)                                        <span class="co"># Data manipulation tools</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>folders <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"control_mut"</span>, <span class="st">"knockdown_mut"</span>)          <span class="co"># Folders to process</span></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>all_data <span class="ot">&lt;-</span> <span class="fu">list</span>()                                    <span class="co"># Empty list to store all data frames</span></span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (folder <span class="cf">in</span> folders) {                             <span class="co"># First loop starts</span></span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>  folder_path <span class="ot">&lt;-</span> <span class="fu">file.path</span>(base_dir, folder)          <span class="co"># Build full path to folder</span></span>
-<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>  files <span class="ot">&lt;-</span> <span class="fu">list.files</span>(folder_path,                    <span class="co"># List all .xlsx files</span></span>
-<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>                      <span class="at">pattern =</span> <span class="st">"</span><span class="sc">\\</span><span class="st">.xlsx$"</span>, </span>
-<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>                      <span class="at">full.names =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (file <span class="cf">in</span> files) {                               <span class="co"># Second loop starts</span></span>
-<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>    df <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(file)                            <span class="co"># Read Excel file</span></span>
-<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>    df<span class="sc">$</span>condition <span class="ot">&lt;-</span> folder                            <span class="co"># Add condition column (folder name)</span></span>
-<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a>    all_data[[<span class="fu">length</span>(all_data) <span class="sc">+</span> <span class="dv">1</span>]] <span class="ot">&lt;-</span> df            <span class="co"># Append df to list (each file = one element)</span></span>
-<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a>migration_data <span class="ot">&lt;-</span> <span class="fu">bind_rows</span>(all_data)                 <span class="co"># Combine all data frames into one tibble</span></span>
-<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a><span class="fu">write_xlsx</span>(migration_data, <span class="st">"combined_migration_data.xlsx"</span>)</span>
-<span id="cb7-29"><a href="#cb7-29" aria-hidden="true" tabindex="-1"></a>                                                      <span class="co"># Save combined dataset to Excel</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)                                        </span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(writexl)                                       </span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>base_dir <span class="ot">&lt;-</span> <span class="st">"C:/Users/ciziok/katcizio.github.io/projects/neuronal_migration_analysis/data/Analysis R3/Tron Intermediate files"</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>                                                       <span class="co"># Base directory where folders live</span></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>folders <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"control_mut"</span>, <span class="st">"knockdown_mut"</span>)           <span class="co"># Folders to process</span></span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (folder <span class="cf">in</span> folders) {                              <span class="co"># Loop through each folder</span></span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>  folder_path <span class="ot">&lt;-</span> <span class="fu">file.path</span>(base_dir, folder)           <span class="co"># Build full path to folder</span></span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a>  files <span class="ot">&lt;-</span> <span class="fu">list.files</span>(folder_path,                     <span class="co"># Find all .xlsx files</span></span>
+<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a>                      <span class="at">pattern =</span> <span class="st">"</span><span class="sc">\\</span><span class="st">.xlsx$"</span>, </span>
+<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a>                      <span class="at">full.names =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (file <span class="cf">in</span> files) {                                <span class="co"># Process each file</span></span>
+<span id="cb13-19"><a href="#cb13-19" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb13-20"><a href="#cb13-20" aria-hidden="true" tabindex="-1"></a>    df <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(file)                             <span class="co"># Read Excel file</span></span>
+<span id="cb13-21"><a href="#cb13-21" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb13-22"><a href="#cb13-22" aria-hidden="true" tabindex="-1"></a>    <span class="fu">names</span>(df)[<span class="fu">names</span>(df) <span class="sc">==</span> <span class="st">"...8"</span>] <span class="ot">&lt;-</span> <span class="st">"prc_dist_V_CP"</span>  <span class="co"># Rename column ...8</span></span>
+<span id="cb13-23"><a href="#cb13-23" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb13-24"><a href="#cb13-24" aria-hidden="true" tabindex="-1"></a>    <span class="fu">write_xlsx</span>(df, file)                               <span class="co"># Save updated file back</span></span>
+<span id="cb13-25"><a href="#cb13-25" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb13-26"><a href="#cb13-26" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb13-27"><a href="#cb13-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-28"><a href="#cb13-28" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span><span class="fu">read_excel</span>(<span class="st">"C:/Users/ciziok/katcizio.github.io/projects/neuronal_migration_analysis/data/Analysis R3/Tron Intermediate files/control_mut/KC63_M1_CTL_B.xlsx"</span>)</span>
+<span id="cb13-29"><a href="#cb13-29" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(df)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 9
+  `Object Num` `X (pixels)` `Y (pixels)` Distance from Lining of Ventricle (mi…¹
+         &lt;dbl&gt;        &lt;dbl&gt;        &lt;dbl&gt;                                   &lt;dbl&gt;
+1            1          598           12                                    291.
+2            2          998          435                                    235.
+3            3         1003          473                                    264.
+4            4          921          508                                    313.
+5            5         1026          542                                    317.
+6            6         1068          607                                    367.
+# ℹ abbreviated name: ¹​`Distance from Lining of Ventricle (microns)`
+# ℹ 5 more variables: `Distance from Top of Cortical Plate (microns)` &lt;dbl&gt;,
+#   `Grayscale Value` &lt;dbl&gt;,
+#   `%migrated Lining of Ventricle to Top of Cortical Plate` &lt;dbl&gt;,
+#   prc_dist_V_CP &lt;dbl&gt;, file_id &lt;chr&gt;</code></pre>
 </div>
-<p>Because I fixed the file names now I can use file_id column to pull out the information on the embryo batch, mouse number condition and section. I can extract all these to separate columns.</p>
+</div>
+<p><br>YAY it worked! <br></p>
+<p><em>FIANLLY I GET TO COMBINE THE FILES TOGETHER</em> <br></p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>migration_data <span class="ot">&lt;-</span> migration_data <span class="sc">%&gt;%</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">KC =</span> <span class="fu">str_extract</span>(file_id, <span class="st">"KC</span><span class="sc">\\</span><span class="st">d+"</span>),          <span class="co"># Extracts KC number (KC72)</span></span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">mouse =</span> <span class="fu">str_extract</span>(file_id, <span class="st">"M</span><span class="sc">\\</span><span class="st">d+"</span>),        <span class="co"># Extracts mouse number (M1)</span></span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">section =</span> <span class="fu">str_extract</span>(file_id, <span class="st">"[A-Z]$"</span>),     <span class="co"># Extracts last letter (A/B/C)</span></span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">cond =</span> <span class="fu">ifelse</span>(<span class="fu">str_detect</span>(file_id, <span class="st">"CTL"</span>),     <span class="co"># Extracts condition</span></span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>                  <span class="st">"control"</span>, <span class="st">"knockdown"</span>)</span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>                                                  <span class="co"># Saving to a separate excel, just because I can</span></span>
-<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a><span class="fu">write_xlsx</span>(migration_data, <span class="st">"migration_data_with_metadata.xlsx"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)                                        <span class="co"># Data manipulation tools</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>folders <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"control_mut"</span>, <span class="st">"knockdown_mut"</span>)          <span class="co"># Folders to process</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>all_data <span class="ot">&lt;-</span> <span class="fu">list</span>()                                    <span class="co"># Empty list to store all data frames</span></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (folder <span class="cf">in</span> folders) {                             <span class="co"># First loop starts</span></span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>  folder_path <span class="ot">&lt;-</span> <span class="fu">file.path</span>(base_dir, folder)          <span class="co"># Build full path to folder</span></span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>  files <span class="ot">&lt;-</span> <span class="fu">list.files</span>(folder_path,                    <span class="co"># List all .xlsx files</span></span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a>                      <span class="at">pattern =</span> <span class="st">"</span><span class="sc">\\</span><span class="st">.xlsx$"</span>, </span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a>                      <span class="at">full.names =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (file <span class="cf">in</span> files) {                               <span class="co"># Second loop starts</span></span>
+<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb15-18"><a href="#cb15-18" aria-hidden="true" tabindex="-1"></a>    df <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(file)                            <span class="co"># Read Excel file</span></span>
+<span id="cb15-19"><a href="#cb15-19" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb15-20"><a href="#cb15-20" aria-hidden="true" tabindex="-1"></a>    df<span class="sc">$</span>condition <span class="ot">&lt;-</span> folder                            <span class="co"># Add condition column (folder name)</span></span>
+<span id="cb15-21"><a href="#cb15-21" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb15-22"><a href="#cb15-22" aria-hidden="true" tabindex="-1"></a>    all_data[[<span class="fu">length</span>(all_data) <span class="sc">+</span> <span class="dv">1</span>]] <span class="ot">&lt;-</span> df            <span class="co"># Append df to list (each file = one element)</span></span>
+<span id="cb15-23"><a href="#cb15-23" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb15-24"><a href="#cb15-24" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb15-25"><a href="#cb15-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-26"><a href="#cb15-26" aria-hidden="true" tabindex="-1"></a>migration_data <span class="ot">&lt;-</span> <span class="fu">bind_rows</span>(all_data)                 <span class="co"># Combine all data frames into one tibble</span></span>
+<span id="cb15-27"><a href="#cb15-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-28"><a href="#cb15-28" aria-hidden="true" tabindex="-1"></a><span class="fu">write_xlsx</span>(migration_data, <span class="st">"combined_migration_data.xlsx"</span>)</span>
+<span id="cb15-29"><a href="#cb15-29" aria-hidden="true" tabindex="-1"></a>                                                      <span class="co"># Save combined dataset to Excel</span></span>
+<span id="cb15-30"><a href="#cb15-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-31"><a href="#cb15-31" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(migration_data)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 10,279
+Columns: 11
+$ `Object Num`                                             &lt;dbl&gt; 1, 2, 3, 4, 5…
+$ `X (pixels)`                                             &lt;dbl&gt; 598, 998, 100…
+$ `Y (pixels)`                                             &lt;dbl&gt; 12, 435, 473,…
+$ `Distance from Lining of Ventricle (microns)`            &lt;dbl&gt; 291.4341, 234…
+$ `Distance from Top of Cortical Plate (microns)`          &lt;dbl&gt; -556.59611, -…
+$ `Grayscale Value`                                        &lt;dbl&gt; 65535, 28931,…
+$ `%migrated Lining of Ventricle to Top of Cortical Plate` &lt;dbl&gt; 65.633997, 75…
+$ prc_dist_V_CP                                            &lt;dbl&gt; 34.36600, 24.…
+$ file_id                                                  &lt;chr&gt; "KC63_M1_CTL_…
+$ condition                                                &lt;chr&gt; "control_mut"…
+$ `Distance from Top of Cortical Plate  (microns)`         &lt;dbl&gt; NA, NA, NA, N…</code></pre>
+</div>
+</div>
+<p><br> Because I fixed the file names now I can use file_id column to pull out the information on the embryo batch, mouse number, condition and section. I can extract all these to separate columns. <br></p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>migration_data <span class="ot">&lt;-</span> migration_data <span class="sc">%&gt;%</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">KC =</span> <span class="fu">str_extract</span>(file_id, <span class="st">"KC</span><span class="sc">\\</span><span class="st">d+"</span>),          <span class="co"># Extracts KC number (KC72)</span></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">mouse =</span> <span class="fu">str_extract</span>(file_id, <span class="st">"M</span><span class="sc">\\</span><span class="st">d+"</span>),        <span class="co"># Extracts mouse number (M1)</span></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">section =</span> <span class="fu">str_extract</span>(file_id, <span class="st">"[A-Z]$"</span>),     <span class="co"># Extracts last letter (A/B/C)</span></span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">cond =</span> <span class="fu">ifelse</span>(<span class="fu">str_detect</span>(file_id, <span class="st">"CTL"</span>),     <span class="co"># Extracts condition</span></span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>                  <span class="st">"control"</span>, <span class="st">"knockdown"</span>)</span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a>                                                  <span class="co"># Saving to a separate excel, just because I can</span></span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a><span class="fu">write_xlsx</span>(migration_data, <span class="st">"migration_data_with_metadata.xlsx"</span>)</span>
+<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(migration_data)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 10,279
+Columns: 15
+$ `Object Num`                                             &lt;dbl&gt; 1, 2, 3, 4, 5…
+$ `X (pixels)`                                             &lt;dbl&gt; 598, 998, 100…
+$ `Y (pixels)`                                             &lt;dbl&gt; 12, 435, 473,…
+$ `Distance from Lining of Ventricle (microns)`            &lt;dbl&gt; 291.4341, 234…
+$ `Distance from Top of Cortical Plate (microns)`          &lt;dbl&gt; -556.59611, -…
+$ `Grayscale Value`                                        &lt;dbl&gt; 65535, 28931,…
+$ `%migrated Lining of Ventricle to Top of Cortical Plate` &lt;dbl&gt; 65.633997, 75…
+$ prc_dist_V_CP                                            &lt;dbl&gt; 34.36600, 24.…
+$ file_id                                                  &lt;chr&gt; "KC63_M1_CTL_…
+$ condition                                                &lt;chr&gt; "control_mut"…
+$ `Distance from Top of Cortical Plate  (microns)`         &lt;dbl&gt; NA, NA, NA, N…
+$ KC                                                       &lt;chr&gt; "KC63", "KC63…
+$ mouse                                                    &lt;chr&gt; "M1", "M1", "…
+$ section                                                  &lt;chr&gt; "B", "B", "B"…
+$ cond                                                     &lt;chr&gt; "control", "c…</code></pre>
+</div>
 </div>
 <p>Nice! Now it will be easier to plot by condition, brain or embryo batch.</p>
-<p><img src="projects/neuronal_migration_analysis/images/excel_9.png" width="100%"></p>
 </section>
 <section id="can-you-believe-it-is-analysis-time" class="level2">
 <h2 class="anchored" data-anchor-id="can-you-believe-it-is-analysis-time">CAN YOU BELIEVE IT IS ANALYSIS TIME?!</h2>
 <p>What is the mean distance cells traveled from ventricle to top of the cortical plate by condition?</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>migration_data <span class="sc">%&gt;%</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(cond) <span class="sc">%&gt;%</span></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">mean_dist =</span> <span class="fu">mean</span>(<span class="st">`</span><span class="at">prc_dist_V_CP</span><span class="st">`</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>migration_data <span class="sc">%&gt;%</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(cond) <span class="sc">%&gt;%</span></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">mean_dist =</span> <span class="fu">mean</span>(<span class="st">`</span><span class="at">prc_dist_V_CP</span><span class="st">`</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 2 × 2
   cond      mean_dist
@@ -433,105 +591,105 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>Lets plot density of cells by condition.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(cowplot)</span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(migration_data, <span class="fu">aes</span>(<span class="at">x =</span> prc_dist_V_CP, <span class="at">fill =</span> cond)) <span class="sc">+</span></span>
-<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_density</span>(<span class="at">alpha =</span> <span class="fl">0.4</span>) <span class="sc">+</span></span>
-<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
-<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Migration Density by Condition"</span>,</span>
-<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Percent Distance V → CP"</span>,</span>
-<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Density"</span></span>
-<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_cowplot</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(cowplot)</span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(migration_data, <span class="fu">aes</span>(<span class="at">x =</span> prc_dist_V_CP, <span class="at">fill =</span> cond)) <span class="sc">+</span></span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_density</span>(<span class="at">alpha =</span> <span class="fl">0.4</span>) <span class="sc">+</span></span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Migration Density by Condition"</span>,</span>
+<span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Percent Distance V → CP"</span>,</span>
+<span id="cb21-10"><a href="#cb21-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Density"</span></span>
+<span id="cb21-11"><a href="#cb21-11" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb21-12"><a href="#cb21-12" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb21-13"><a href="#cb21-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_cowplot</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="final-report_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="final-report_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 </div>
 <p>Looks good! Seems like way more cells made it all the way to the top in control! How would a violin plot look like?</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>migration_data <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"migration_data_with_metadata.xlsx"</span>)</span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(migration_data, <span class="fu">aes</span>(<span class="at">x =</span> cond, <span class="at">y =</span> prc_dist_V_CP, <span class="at">fill =</span> cond)) <span class="sc">+</span></span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_violin</span>(<span class="at">trim =</span> <span class="cn">FALSE</span>, <span class="at">alpha =</span> <span class="fl">0.6</span>) <span class="sc">+</span></span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="at">width =</span> <span class="fl">0.15</span>, <span class="at">outlier.shape =</span> <span class="cn">NA</span>) <span class="sc">+</span></span>
-<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
-<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Migration Distribution (Violin)"</span>,</span>
-<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Condition"</span>,</span>
-<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Percent Distance V → CP"</span></span>
-<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_cowplot</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>migration_data <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"migration_data_with_metadata.xlsx"</span>)</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(migration_data, <span class="fu">aes</span>(<span class="at">x =</span> cond, <span class="at">y =</span> prc_dist_V_CP, <span class="at">fill =</span> cond)) <span class="sc">+</span></span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_violin</span>(<span class="at">trim =</span> <span class="cn">FALSE</span>, <span class="at">alpha =</span> <span class="fl">0.6</span>) <span class="sc">+</span></span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="at">width =</span> <span class="fl">0.15</span>, <span class="at">outlier.shape =</span> <span class="cn">NA</span>) <span class="sc">+</span></span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Migration Distribution (Violin)"</span>,</span>
+<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Condition"</span>,</span>
+<span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Percent Distance V → CP"</span></span>
+<span id="cb22-10"><a href="#cb22-10" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb22-11"><a href="#cb22-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_cowplot</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="final-report_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="final-report_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 </div>
 <p>I like it way better! Lets look at cumulative distribution! It will show us proportion of cells reaching a given distance.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>migration_data <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"migration_data_with_metadata.xlsx"</span>)</span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(migration_data, <span class="fu">aes</span>(<span class="at">x =</span> prc_dist_V_CP, <span class="at">color =</span> cond)) <span class="sc">+</span></span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_ecdf</span>(<span class="at">size =</span> <span class="fl">1.2</span>) <span class="sc">+</span></span>
-<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
-<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Cumulative Migration Distribution"</span>,</span>
-<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Percent Distance V → CP"</span>,</span>
-<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Cumulative Fraction"</span></span>
-<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_cowplot</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>migration_data <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"migration_data_with_metadata.xlsx"</span>)</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(migration_data, <span class="fu">aes</span>(<span class="at">x =</span> prc_dist_V_CP, <span class="at">color =</span> cond)) <span class="sc">+</span></span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_ecdf</span>(<span class="at">size =</span> <span class="fl">1.2</span>) <span class="sc">+</span></span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Cumulative Migration Distribution"</span>,</span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Percent Distance V → CP"</span>,</span>
+<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Cumulative Fraction"</span></span>
+<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_cowplot</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="final-report_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="final-report_files/figure-html/unnamed-chunk-12-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 </div>
 <p>Knockdown curve is left‑shifted which means fewer cells reach the CP! EXCITING! Lets visualize it better by binning!</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>migration_data <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"migration_data_with_metadata.xlsx"</span>)</span>
-<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>migration_binned <span class="ot">&lt;-</span> migration_data <span class="sc">%&gt;%</span>                              <span class="co"># I am creating bins</span></span>
-<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>                                                                    <span class="co"># I need to create new column called bin</span></span>
-<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>                                                                    <span class="co"># Then "cut" my variables to converts them into discrete intervals        </span></span>
-<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">bin =</span> <span class="fu">cut</span>(</span>
-<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>    prc_dist_V_CP,</span>
-<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">100</span>, <span class="at">by =</span> <span class="dv">10</span>),</span>
-<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">include.lowest =</span> <span class="cn">TRUE</span>, </span>
-<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">labels =</span> <span class="fu">paste0</span>(<span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">90</span>, <span class="at">by =</span> <span class="dv">10</span>), <span class="st">"-"</span>, <span class="fu">seq</span>(<span class="dv">10</span>, <span class="dv">100</span>, <span class="at">by =</span> <span class="dv">10</span>))  <span class="co"># Make sure lowest value from first bin is included</span></span>
-<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a>  )) <span class="sc">%&gt;%</span></span>
-<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(cond, bin) <span class="sc">%&gt;%</span>                                           <span class="co"># Grouping by condition and bin</span></span>
-<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">n =</span> <span class="fu">n</span>()) <span class="sc">%&gt;%</span>                                            <span class="co"># Count cells in each bin</span></span>
-<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">percent =</span> n <span class="sc">/</span> <span class="fu">sum</span>(n) <span class="sc">*</span> <span class="dv">100</span>)                                <span class="co"># Converting counts to percentages</span></span>
-<span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb14-19"><a href="#cb14-19" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb14-20"><a href="#cb14-20" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(migration_binned, <span class="fu">aes</span>(<span class="at">x =</span> bin, <span class="at">y =</span> percent, <span class="at">fill =</span> cond)) <span class="sc">+</span>  <span class="co"># Plotting the binned data</span></span>
-<span id="cb14-21"><a href="#cb14-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="at">position =</span> <span class="st">"dodge"</span>) <span class="sc">+</span>                                    <span class="co"># Dodge - bars are placed side by side</span></span>
-<span id="cb14-22"><a href="#cb14-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
-<span id="cb14-23"><a href="#cb14-23" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Migration Binning (10% Intervals)"</span>,</span>
-<span id="cb14-24"><a href="#cb14-24" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Migration Bin (Percent V → CP)"</span>,</span>
-<span id="cb14-25"><a href="#cb14-25" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Percent of Cells"</span></span>
-<span id="cb14-26"><a href="#cb14-26" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb14-27"><a href="#cb14-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_cowplot</span>() <span class="sc">+</span></span>
-<span id="cb14-28"><a href="#cb14-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
-<span id="cb14-29"><a href="#cb14-29" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">0</span>, <span class="at">vjust =</span> <span class="fl">0.2</span>, <span class="at">hjust =</span> <span class="fl">0.2</span>), <span class="co"># keep horizontal</span></span>
-<span id="cb14-30"><a href="#cb14-30" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.ticks.length =</span> <span class="fu">unit</span>(<span class="dv">2</span>, <span class="st">"pt"</span>)</span>
-<span id="cb14-31"><a href="#cb14-31" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>migration_data <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"migration_data_with_metadata.xlsx"</span>)</span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a>migration_binned <span class="ot">&lt;-</span> migration_data <span class="sc">%&gt;%</span>                              <span class="co"># I am creating bins</span></span>
+<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a>                                                                    <span class="co"># I need to create new column called bin</span></span>
+<span id="cb24-8"><a href="#cb24-8" aria-hidden="true" tabindex="-1"></a>                                                                    <span class="co"># Then "cut" my variables to converts them into discrete intervals        </span></span>
+<span id="cb24-9"><a href="#cb24-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">bin =</span> <span class="fu">cut</span>(</span>
+<span id="cb24-10"><a href="#cb24-10" aria-hidden="true" tabindex="-1"></a>    prc_dist_V_CP,</span>
+<span id="cb24-11"><a href="#cb24-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">100</span>, <span class="at">by =</span> <span class="dv">20</span>),</span>
+<span id="cb24-12"><a href="#cb24-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">include.lowest =</span> <span class="cn">TRUE</span>, </span>
+<span id="cb24-13"><a href="#cb24-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">labels =</span> <span class="fu">paste0</span>(<span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">80</span>, <span class="at">by =</span> <span class="dv">20</span>), <span class="st">"-"</span>, <span class="fu">seq</span>(<span class="dv">20</span>, <span class="dv">100</span>, <span class="at">by =</span> <span class="dv">20</span>))  <span class="co"># Make sure lowest value from first bin is included</span></span>
+<span id="cb24-14"><a href="#cb24-14" aria-hidden="true" tabindex="-1"></a>  )) <span class="sc">%&gt;%</span></span>
+<span id="cb24-15"><a href="#cb24-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(cond, bin) <span class="sc">%&gt;%</span>                                           <span class="co"># Grouping by condition and bin</span></span>
+<span id="cb24-16"><a href="#cb24-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">n =</span> <span class="fu">n</span>()) <span class="sc">%&gt;%</span>                                            <span class="co"># Count cells in each bin</span></span>
+<span id="cb24-17"><a href="#cb24-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">percent =</span> n <span class="sc">/</span> <span class="fu">sum</span>(n) <span class="sc">*</span> <span class="dv">100</span>)                                <span class="co"># Converting counts to percentages</span></span>
+<span id="cb24-18"><a href="#cb24-18" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb24-19"><a href="#cb24-19" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb24-20"><a href="#cb24-20" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(migration_binned, <span class="fu">aes</span>(<span class="at">x =</span> bin, <span class="at">y =</span> percent, <span class="at">fill =</span> cond)) <span class="sc">+</span>  <span class="co"># Plotting the binned data</span></span>
+<span id="cb24-21"><a href="#cb24-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="at">position =</span> <span class="st">"dodge"</span>) <span class="sc">+</span>                                    <span class="co"># Dodge - bars are placed side by side</span></span>
+<span id="cb24-22"><a href="#cb24-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb24-23"><a href="#cb24-23" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Migration Binning (20% Intervals)"</span>,</span>
+<span id="cb24-24"><a href="#cb24-24" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Migration Bin (Percent V → CP)"</span>,</span>
+<span id="cb24-25"><a href="#cb24-25" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Percent of Cells"</span></span>
+<span id="cb24-26"><a href="#cb24-26" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb24-27"><a href="#cb24-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_cowplot</span>() <span class="sc">+</span></span>
+<span id="cb24-28"><a href="#cb24-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
+<span id="cb24-29"><a href="#cb24-29" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">0</span>, <span class="at">vjust =</span> <span class="fl">0.2</span>, <span class="at">hjust =</span> <span class="fl">0.2</span>), <span class="co"># keep horizontal</span></span>
+<span id="cb24-30"><a href="#cb24-30" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.ticks.length =</span> <span class="fu">unit</span>(<span class="dv">2</span>, <span class="st">"pt"</span>)</span>
+<span id="cb24-31"><a href="#cb24-31" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="final-report_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="final-report_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -541,23 +699,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="statistics">STATISTICS!</h2>
 <p>Lets visually check distribution.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(migration_data, <span class="fu">aes</span>(<span class="at">x =</span> prc_dist_V_CP)) <span class="sc">+</span></span>
-<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">bins =</span> <span class="dv">30</span>) <span class="sc">+</span></span>
-<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>cond) <span class="sc">+</span></span>
-<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_cowplot</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(migration_data, <span class="fu">aes</span>(<span class="at">x =</span> prc_dist_V_CP)) <span class="sc">+</span></span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">bins =</span> <span class="dv">30</span>) <span class="sc">+</span></span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>cond) <span class="sc">+</span></span>
+<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_cowplot</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="final-report_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="final-report_files/figure-html/unnamed-chunk-14-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 </div>
 <p>This is definitely not normal distribution! Lets try some stats.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">wilcox.test</span>(prc_dist_V_CP <span class="sc">~</span> cond, <span class="at">data =</span> migration_data)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">wilcox.test</span>(prc_dist_V_CP <span class="sc">~</span> cond, <span class="at">data =</span> migration_data)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
     Wilcoxon rank sum test with continuity correction
@@ -569,15 +727,15 @@ alternative hypothesis: true location shift is not equal to 0</code></pre>
 </div>
 <p>Seems like knockdown significantly reduces migration! Lets dig deeper! Does embryo batch accounts for any differences?</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>mouse_medians <span class="ot">&lt;-</span> migration_data <span class="sc">%&gt;%</span>                     <span class="co"># Compute medians per mouse per condition</span></span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(KC, mouse, cond) <span class="sc">%&gt;%</span>                         <span class="co"># Group by KC batch (embryo batch), mouse and condition </span></span>
-<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(                                            <span class="co"># Calculate median migration distance</span></span>
-<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">median_prc =</span> <span class="fu">median</span>(prc_dist_V_CP, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">n_cells    =</span> <span class="fu">sum</span>(<span class="sc">!</span><span class="fu">is.na</span>(prc_dist_V_CP)),            <span class="co"># Count how manay cells were measured for that mouse</span></span>
-<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">.groups    =</span> <span class="st">"drop"</span>                                 <span class="co"># Drop grouping so table is clear</span></span>
-<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a>mouse_medians</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>mouse_medians <span class="ot">&lt;-</span> migration_data <span class="sc">%&gt;%</span>                     <span class="co"># Compute medians per mouse per condition</span></span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(KC, mouse, cond) <span class="sc">%&gt;%</span>                         <span class="co"># Group by KC batch (embryo batch), mouse and condition </span></span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(                                            <span class="co"># Calculate median migration distance</span></span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">median_prc =</span> <span class="fu">median</span>(prc_dist_V_CP, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">n_cells    =</span> <span class="fu">sum</span>(<span class="sc">!</span><span class="fu">is.na</span>(prc_dist_V_CP)),            <span class="co"># Count how manay cells were measured for that mouse</span></span>
+<span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">.groups    =</span> <span class="st">"drop"</span>                                 <span class="co"># Drop grouping so table is clear</span></span>
+<span id="cb28-7"><a href="#cb28-7" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb28-8"><a href="#cb28-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-9"><a href="#cb28-9" aria-hidden="true" tabindex="-1"></a>mouse_medians</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 8 × 5
   KC    mouse cond      median_prc n_cells
@@ -593,17 +751,17 @@ alternative hypothesis: true location shift is not equal to 0</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lme4)       <span class="co"># mixed-effect modeling package</span></span>
-<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lmerTest)  <span class="co"># p-values</span></span>
-<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>model_med <span class="ot">&lt;-</span> <span class="fu">lmer</span>(</span>
-<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>  median_prc <span class="sc">~</span> cond <span class="sc">+</span> (<span class="dv">1</span> <span class="sc">|</span> KC) <span class="sc">+</span> (<span class="dv">1</span> <span class="sc">|</span> mouse),          <span class="co"># is there natural difference between embryo batches or mice</span></span>
-<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> mouse_medians                                 <span class="co"># - Fixed effects: the estimated effect of knockdown and its p-value.</span></span>
-<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a>                                                       <span class="co"># - Random effects: how much KC and mouse contribute to variability.</span></span>
-<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a>                                                       <span class="co"># - Residuals: leftover variation not explained by the model.</span></span>
-<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a>)              </span>
-<span id="cb20-10"><a href="#cb20-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-11"><a href="#cb20-11" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model_med)          </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lme4)       <span class="co"># mixed-effect modeling package</span></span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lmerTest)  <span class="co"># p-values</span></span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a>model_med <span class="ot">&lt;-</span> <span class="fu">lmer</span>(</span>
+<span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a>  median_prc <span class="sc">~</span> cond <span class="sc">+</span> (<span class="dv">1</span> <span class="sc">|</span> KC) <span class="sc">+</span> (<span class="dv">1</span> <span class="sc">|</span> mouse),          <span class="co"># is there natural difference between embryo batches or mice</span></span>
+<span id="cb30-6"><a href="#cb30-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> mouse_medians                                 <span class="co"># - Fixed effects: the estimated effect of knockdown and its p-value.</span></span>
+<span id="cb30-7"><a href="#cb30-7" aria-hidden="true" tabindex="-1"></a>                                                       <span class="co"># - Random effects: how much KC and mouse contribute to variability.</span></span>
+<span id="cb30-8"><a href="#cb30-8" aria-hidden="true" tabindex="-1"></a>                                                       <span class="co"># - Residuals: leftover variation not explained by the model.</span></span>
+<span id="cb30-9"><a href="#cb30-9" aria-hidden="true" tabindex="-1"></a>)              </span>
+<span id="cb30-10"><a href="#cb30-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-11"><a href="#cb30-11" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model_med)          </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Linear mixed model fit by REML. t-tests use Satterthwaite's method [
 lmerModLmerTest]
@@ -637,13 +795,13 @@ optimizer (nloptwrap) convergence code: 0 (OK)
 boundary (singular) fit: see help('isSingular')</code></pre>
 </div>
 </div>
-<p>What that tells us is that: <br></p>
-<p>Intercept = 83.2<br> This is the estimated median migration percentage for control mice, after accounting for KC and mouse variability.<br></p>
-<p>condknockdown = –9.51<br> This is the key effect.Knockdown mice have a median migration distance ~9.5 percentage points lower than control mice.<br></p>
-<p>p = 0.0118 <br> This indicates the knockdown effect is statistically significant, even after accounting for KC batch differences and mouse‑to‑mouse variability. <br></p>
-<p>KC variance = 0 <br> This means KC batch does not contribute measurable variability in median migration. <br></p>
-<p>mouse variance = 9.46 (SD ≈ 3.08) <br> It means different mice have different baseline migration medians. <br></p>
-<p>Residual variance = 7.14 (SD ≈ 2.67) <br> This is the remaining variability not explained by condition or random effects.<br></p>
+<p>The analysis tells us is that: <br></p>
+<p><strong>Intercept = 83.2</strong><br> This is the estimated median migration percentage for control mice, after accounting for KC and mouse variability.<br></p>
+<p><strong>condknockdown = –9.51</strong><br> This is the key effect.Knockdown mice have a median migration distance ~9.5 percentage points lower than control mice.<br></p>
+<p><strong>p = 0.0118</strong> <br> This indicates the knockdown effect is statistically significant, even after accounting for KC batch differences and mouse‑to‑mouse variability. <br></p>
+<p><strong>KC variance = 0</strong> <br> This means KC batch does not contribute measurable variability in median migration. <br></p>
+<p><strong>mouse variance = 9.46 (SD ≈ 3.08)</strong> <br> It means different mice have different baseline migration medians. <br></p>
+<p><strong>Residual variance = 7.14 (SD ≈ 2.67)</strong> <br> This is the remaining variability not explained by condition or random effects.<br></p>
 </section>
 <section id="key-findings" class="level2">
 <h2 class="anchored" data-anchor-id="key-findings">Key Findings</h2>

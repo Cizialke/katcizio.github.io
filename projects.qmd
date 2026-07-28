@@ -12,7 +12,7 @@ My final project for CELL 6351 - Intro to Reproducible Data Analysis Using R.
 
 [**View Final Report** →](projects/final-report.qmd)
 
----
+------------------------------------------------------------------------
 
 ## Adding More Projects
 
@@ -26,6 +26,6 @@ As you continue your research journey, you can add more pages here! For example:
 
 To add a new project:
 
-1. Create a new `.qmd` file in the `projects/` folder
-2. Add a link to it on this page
-3. Push to GitHub and your site updates automatically!
+1.  Create a new `.qmd` file in the `projects/` folder
+2.  Add a link to it on this page
+3.  Push to GitHub and your site updates automatically!
