@@ -1,5 +1,5 @@
 ---
-title: "Kat Cizio"
+title: "Ozzy Cizio"
 toc: false
 image: "IMG_8283.JPG"
 about:
@@ -8,44 +8,39 @@ about:
   - text: GitHub
     href: https://github.com/Cizialke/katcizio.github.io
   - text: email
-    href:  katarzyna-cizio@ou.edu
+    href: mailto:katarzyna-cizio@ou.edu
 ---
 
 ::: {.columnpage}
 
-# Hello! 👋
+# Hi Stranger!
 
-Welcome to my research profile website. I'm a student in the Intro to Reproducible Data Analysis Using R course.
+
 
 ## About Me
 
-Replace this section with information about yourself:
 
-- **Name:** Katarzyna Cizio
-- **Institution:** University of Oklahoma Health Campus
-- **Research Interests:** Add your research interests here
+- **Name:** Katarzyna (Kasia) Cizio
+- **Institution:** University of Oklahoma Health Campus, Department of Neuroscience
+- **Research Interests:** neurodevelopment, mitochondria, metabolism
 - **Email:** katarzyna-cizio@ou.edu
+- **The Dog on The Left:** My companion Ozzy, as you can see he is cute
 
 ## My Research
 
-I'm interested in understanding [your topic area]. Through this course, I've learned how to:
+I'm interested in understanding how deficits in either activity or abundance of mitochondrial proteins affect neuronal migration in developing mouse cortex. Through this course, I've learned how to:
 
-- Use R for data analysis
-- Create reproducible research workflows
-- Build websites to share my work
-- Manage my research projects with Git and GitHub
 
-## This Website
+- How not to waste my life on mindless clicking, coping and pasting between windows. I have ADHD, I hate doing that. Thank you Lindsay and Eleana for teaching me a more mindful use of free resources to optimize my research performance.
 
-This site showcases my research and projects. Check out my **Projects** page to see my final report and other work!
+## Don't Get Too Excited
+
+This site showcases nothing, it shows I am just trying.<br>
+**Projects** page to see my final report and other work!
 
 As my research progresses, I'll continue adding:
 
-- Publications
-- Conference posters
-- New analyses and projects
-- Additional resources
+- Funny quotes and jokes
 
 ---
 
-**Keep exploring!** Navigate using the menu above.
